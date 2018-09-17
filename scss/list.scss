@@ -1,0 +1,230 @@
+@charset "UTF-8";
+$head_border2: 1px solid #efefef;
+$fontSize:14px;
+body{
+    background-color: #f4f4f4;
+}
+.head{
+    width: 100%;
+    height: 40px;
+    background-color: #f6f8fb;
+    border-top:$head_border2;
+    border-bottom:$head_border2;
+    font-size: $fontSize;
+    line-height: 40px;
+    padding-left: 13px;
+    box-sizing: border-box;
+    color: #999;
+    a{
+        color: #333;
+    }
+    a:last-child{
+        color: #999;
+    }
+}
+.selector{
+    width: 98%;
+    height:170px;
+    background: #FFF;
+    padding: 15px 10px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    .aHover{
+        color:#00c3f5;
+    }
+    
+}
+.selector_item{
+    height: 46px;
+    line-height: 46px;
+    color: #333; 
+    a{
+        font-size: $fontSize;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        color: #333;  
+        padding: 0 25px;
+    }
+    a:hover{
+        transition: all .6s;
+        color:#00c3f5;
+    }
+    span{
+        font-size: $fontSize;
+        display: inline-block;
+        padding-left: 10px;   
+        width: 75px;
+        margin-right: 10px;
+        user-select: none;
+    } 
+
+}
+.filter{
+    width: 100%;
+    font-size: $fontSize;
+    padding: 22.5px 13px;
+    overflow: hidden;
+    box-sizing: border-box;
+    /*a标签hover效果*/
+    .aHover{
+        color:#00c3f5;
+    }
+}
+
+.filter_l{
+    float: left;
+    a{
+        font-size: $fontSize;
+        color: #666;
+        width: 50px;
+        height: 20px;
+        display: inline-block;
+        margin-right: 20px;
+    }
+    a:hover{
+        transition: all .6s;
+        color:#00c3f5;
+    }
+    .up{
+        width: 43px;
+        background:url(../img/arrow.gif) no-repeat right center;
+        background-position-y: 6px; 
+    }
+    .down{
+        width: 43px;
+        background:url(../img/arrow.gif) no-repeat right center;
+        background-position-y: -9px; 
+    }
+}
+
+
+.filter_r{
+    float: right;
+    cursor: pointer;
+    color: #666;
+    i{
+        float: left;
+        width: 12px;
+        height: 12px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        margin-top: 2px;
+        margin-right: 6px;
+    }
+    p{
+        float: left;  
+        font-size: $fontSize - 2;
+    }
+}
+/*仿checkbox选中效果*/
+.isChecked{
+   background: url(../img/checkbox.gif) no-repeat left center; 
+}
+.content{
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 0 8px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+
+.phone_detail{
+    padding: 20px 30px 0;
+    box-sizing: border-box;
+    width: 300px;
+    height: 390px;
+    background-color: white;
+    float: left;
+    transition: all 0.4s;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    position: relative;
+    cursor: pointer;
+    img:first-child{
+        width: 200px;
+        display: block;
+        margin: 0 auto;
+    }
+}
+.phone_detail:hover{
+    box-shadow: 0 15px 30px rgba(0,0,0,.2);
+}
+.phone_detail:hover .compare{ 
+    opacity: 1;
+}
+.phoneImgs{
+    width: 100%;
+    height: 42px;
+    display: -webkit-flex;
+    justify-content: center;
+    margin: 13px 0 15px;
+    img{
+        width: 40px;
+        height: 40px;
+        border: $head_border2;
+        float: left;
+    }
+    img:first-child{
+        width: 40px;
+        margin-left: 5px;
+    }
+    img:nth-child(odd){
+        margin-right: 8px;
+    }
+
+}
+/*图片点中时增加边框*/
+.phoneImgs_border{
+    border-color:  #bdbdbd; 
+}
+.phone_link{
+    color: #333;
+    text-align: center;
+    display: block;
+    width: 100%;
+    h2{
+        font-size: $fontSize;
+        line-height: $fontSize;
+        height: $fontSize;
+        margin-bottom: 15px;
+        font-weight: 100;
+
+    }
+    h3{
+        font-size: $fontSize - 2; 
+        line-height: $fontSize - 2;
+        height: $fontSize - 2;
+        color: #e02b41;
+        margin-bottom: 18px; 
+        font-weight: 100;
+
+    }
+  
+}
+.pr-price{
+    font-size: $fontSize + 4;
+}
+.pr-price+span{
+    font-size: $fontSize - 2;   
+}
+.phone_price{
+    color: #e02b41;
+    margin-left: -2px;  
+}
+.compare{
+    width: 50px;
+    font-size: $fontSize;
+    height: $fontSize * 1.5;
+    line-height: $fontSize * 1.5;
+    background: url(../img/compare.gif) no-repeat left center;
+    background-size: 20px 20px;
+    text-indent: 21px;
+    position: absolute;
+    left: 24px;
+    top: 22px;
+    opacity: 0;
+    transition: all .3s;
+    color: #666;
+}

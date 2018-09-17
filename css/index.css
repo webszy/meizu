@@ -1,0 +1,413 @@
+﻿@charset "UTF-8";
+.topbanner {
+    width: 100%;
+    height: 120px;
+    background: url(../img/topbanner.jpg) no-repeat center top;
+    background-size: cover;
+    position: relative;
+}
+
+/*轮播图*/
+#gellay{
+    width: 100%;
+    height: 480px;
+    position: relative;
+    /* background: salmon; */
+    /* display: none; */
+}
+.swiper-container{
+    width: 100%;
+    height: 480px;
+}
+.swiper-slide{
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+}
+.swiper-button-prev{
+    position: absolute;
+    left: 256px;
+}
+.swiper-button-next,.swiper-button-prev{
+    height: 60px;
+    width: 30px;
+}
+.lunbo_next:hover ,.lunbo_prev:hover {
+    background-color: rgba(0,0,0,0.4);
+}
+/*轮播图上方侧边菜单*/
+.list_nav{
+    width: 245px;
+    height: 465px; 
+    position: absolute; 
+    left: 12px;
+    top:-1px;
+    background: rgba(255, 255, 255, 0.4);
+    z-index:10;
+    padding-top:14px;
+    border-top:1px solid #efefef;
+    border-bottom:1px solid #efefef;
+}
+.list_nav li{
+    text-align: center;
+    height: 56px;
+    line-height: 56px;
+    transition: all .5s linear;
+    cursor: pointer;
+    /* position: relative; */
+}
+.list_nav li:hover{
+    background: rgba(255, 255, 255, 0.9);
+}
+.list_nav a{
+    color: #333;
+    font-size: 12px;
+}
+.list_nav li:hover .leftSub{
+    display: block;
+}
+.leftSub:hover{
+    background: #fff; 
+}
+.leftSub{
+    height: 466px;
+    padding-top: 14px;
+    padding-left: 30px;
+    padding-right: 40px;
+    position: absolute;
+    left: 245px;
+    top: 0px;
+    background-color: white;
+    display: none;
+}
+.list_nav .leftSub a:hover{
+    color:#00c3f5 ;
+}
+.leftSub_tit{
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    width: 320px;
+    border-bottom:1px solid #f5f5f5;
+    text-align: left;
+    display: block;
+    margin-bottom: 20px;
+}
+.leftSub_tit span{
+    float: right;
+}
+.leftSub img{
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+}
+leftSub_top{
+    width: 100%;
+    overflow: hidden;
+}
+.leftSub ul{
+    width: 100%;
+    display: block;
+}
+.leftSub li{
+    float: left;
+    height: 40px; 
+    line-height:40px;
+    margin-bottom: 20px;
+}
+.leftSub li:nth-of-type(odd){
+    margin-right:100px; 
+}
+
+.leftSub li a{
+    float: right;
+    height: 40px; 
+    line-height:40px;
+    text-indent: 12px;
+}
+/*轮播图结束*/
+.sec1{
+    width: 100%;
+    padding: 10px 12px;
+    /* background: palegreen; */
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-size:20px;
+}
+.sec_menu{
+    height: 156px;
+    width: 239px; 
+    float: left;
+    margin-right: 0.7em;
+}
+.sec_menu div{
+    width: 50%;
+    height: 50%;
+    float: left;
+    cursor: pointer;
+}
+.sec_menu div:hover{
+    color:#00c3f5;
+}
+.sec_menu i{
+    display: block;
+    text-align: center;
+}
+.sec_menu p{
+    font-size: 12px;
+    text-align: center;
+}
+.icon-M,.icon-circlearrow,
+.icon-siglypharrowchange,
+.icon-zhangdanchaxun{
+    font-size: 44px;
+}
+/**/
+.sec1 a{
+    height: 156px;
+    width: 239px;
+    margin-right: 10px;
+    float: left;
+}
+.sec1 img{
+    height: 157px;
+    width: 239px; 
+}
+.sec1 a:last-child{
+    margin-right: 0;
+}
+.sec2{
+    width: 100%;  
+    overflow: hidden;
+}
+.sec2_tit{
+    padding-left: 13px;
+    font-size: 24px;
+    line-height: 32px;
+    height: 32px;
+    color: #333;
+    font-weight: 100;
+    white-space: nowrap;
+}
+.sec2 h3{
+    position: relative;
+}
+.gellay2{
+    width: 100%;
+    height: 340px;
+    padding: 8px 12px;
+    position: relative;
+}
+.arrows{
+    position: absolute;
+    left: 1201px;
+    top:25px;
+    width: 60px;
+    height: 24px;
+}
+
+.arrows .swiper-button-next,
+.arrows .swiper-button-prev{
+    width: 22px;
+    height: 22px;
+    background-size: 22px 22px;
+    color: #333;
+    outline: none;
+}
+.arrows .swiper-button-prev{
+    position: absolute;
+    top:0;
+    left:8px;
+}
+.arrows .swiper-button-next{
+    position: absolute;
+    top:0;
+    right:0;
+}
+/* .ga2_con{
+    width: 100%;
+    height: 340px;
+}   */
+.ga2_list {
+    width: 239px;
+    height: 340px;
+    background: white;
+    float: left;
+    /* margin-right: 10px; */
+    transition: all 0.6s;
+}
+.ga2_list:hover{
+    box-shadow: 0 15px 30px rgba(0,0,0,.1);
+    transform: translateX(-4px) translateY(-4px);
+}
+.ga2_list img{
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin:22px auto 0; 
+}
+.ga2_list h4{
+    width:70px;
+    height: 30px;
+    margin:20px auto 0; 
+    font-size: 14px;
+    color: #333;
+    line-height: 30px;
+    font-weight: 100;
+    white-space: nowrap;
+
+}
+.ga2_list  p{
+    width:32px;
+    height: 17px;
+    /* margin:0 auto;  */
+    margin-left: 99px;
+    font-size: 10px;
+    color: #e02b41;
+    line-height:17px;
+    border: 1px solid #e02b41;
+    text-align: center;
+    border-radius: 3px;
+    float: left;
+}
+.ga2_list  h4:last-child{
+    /* margin:0 auto;  */
+    color: #e02b41;
+}
+.banner2{
+    width: 100%;
+    height: 170px;
+    padding: 10px 11px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.banner2 a{
+    display: block;
+    width: 100%;
+    height: 155px;
+    background: url(../img/banner2.jpg) no-repeat left center;
+    background-size:100%;
+}
+.sec3{
+    width: 100%;
+    overflow: hidden;
+}
+.sec3_con{
+    width: 100%;
+    padding: 18px 12px 0;
+    overflow: hidden;
+}
+.sec3 h3{
+    float: left;
+    width: 48px;
+}
+.sec3_tit2{
+    width: 48px;
+    height: 18px;
+    border-bottom: 2px solid #666666;
+    font-size: 12px;
+    line-height: 15px;
+    color: #666666;
+    float: left;
+    margin-left:30px;
+    padding-top:10px;
+}
+.more{
+    float: right;
+    color: #999;
+    font-size: 12px;
+    padding-top: 8px;
+    margin-right: 10px;
+}
+.sec3_con .sec3_con_tit3{
+    margin: 0;
+    margin-left: 49px;
+    float: left;
+}
+.sec3_con_tit3~span{
+    color: #333;
+    font-size: 10px;
+    float: left;
+}
+.sec3_con a{
+    margin-bottom: 10px;
+    margin-right: 10px;
+
+}
+.sec3_con a:first-child{
+    display: block;
+    float: left; 
+}
+.first img{
+    display: block;
+    width: 239px;
+    height: 340px;
+}
+.banner3 a{
+    background: url(../img/banner3.jpg) no-repeat left center;
+    background-size:100%;
+}
+.banner4 a{
+    background: url(../img/banner4.jpg) no-repeat left center;
+    background-size:100%;
+}
+.sec5{
+    margin-bottom: 44px;
+}
+.sec5 .sec2_tit{
+    margin-right: 49px;
+}
+
+.sec5_hover{
+    border-bottom: 2px solid #666666;
+}
+.sec5 .title{
+    overflow: hidden;
+    float: left;
+}
+.title-list{
+    cursor: pointer;
+    /* width: 48px; */
+    height: 18px;
+    /* border-bottom: 2px solid #666666; */
+    font-size: 12px;
+    line-height: 15px;
+    color: #666666;
+    float: left;
+    margin-left: 40px;
+    padding-top: 10px;
+    position: relative;
+}
+.title-list li{
+    float: left;
+    margin-right: 30px;
+}
+.title-list li:last-of-type{
+    padding-right: 3px;
+}
+
+.product-wrap{
+    width: 100%;
+    overflow: hidden;
+}
+.product {
+    width: 100%;
+    overflow: hidden;
+    padding: 18px 12px 0;
+}
+.product li{
+    width: 239px;
+    height: 340px;
+    float: left;
+    margin-right: 10px;
+}
+.title-list p{
+    width: 80px;
+    height: 11px;
+    position: absolute;
+    background-color: #f60;
+    /* overflow: hidden; */
+    left: 0;
+    top:28px;
+}

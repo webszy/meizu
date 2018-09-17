@@ -1,0 +1,423 @@
+﻿
+/* body{
+    overflow-x: hidden;
+} */
+@charset "UTF-8";
+.logo {
+    /* width:100%; */
+    height: 40px;
+    background-color: white;
+    padding-top: 28px;
+    padding-left:31px;
+    overflow: hidden;
+}
+/*当前屏幕宽度1263*/
+.logo a{
+    display: block;
+    background-image: url(../img/logo.png);
+    height: 20px;
+    width: 110px;
+    background-size: cover;
+    /* margin: 28px 31.5px; */
+    overflow: hidden;
+}
+.wrap{
+    width: 100%;
+    height: 750px;
+    background-image: url(../img/login_banner.jpg);
+    background-size: cover;
+    position: relative;
+}
+#ysj{
+    width: 35px;
+    height: 35px;
+    position:absolute;
+    right:10px;
+    top:10px;
+    cursor: pointer;
+    z-index: 9;
+}
+.loginBox{
+    background-color: white;
+    width:320px;
+    height:443px;
+    position:absolute;
+    right:223px;
+    top:105px;
+    padding: 35px 35px 10px;
+    border-radius: 2px;
+}
+.tit{
+    width: 100%;
+    padding-top: 35px;
+    text-align: center;
+    margin-bottom: 70px;
+}
+.tit a{
+    color: #7f7f7f;
+    font-size: 18px; 
+}
+.tit .titblue{
+    color: #32A5E7;
+}
+
+.register-line{
+    color: #B3ABAB;
+    display: inline-block;
+    border: 2px solid #B3ABAB;
+    border-left: 1px;
+    height: 10px;
+    line-height: 20px;
+    margin-right: 32px;
+    margin-left: 32px;
+}
+#login_msg{
+    width: 290px;
+    height: 20px;
+    position: absolute;
+    background-color: #90EE90;
+    border-radius: 8px;
+    left: 49px;
+    top: 136px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+    color: whitesmoke;
+    display: none;
+}
+/*扫码登录*/
+.qrlogin{
+    width: 100%;
+    height: 443px;;
+    position: absolute;
+    left: 0;
+    top:0;
+    z-index: 3;
+    background-color: white;
+    padding-top: 42px;
+    text-align: center;
+    overflow: hidden;
+    display: none;
+}
+.qrlogin p{
+    font-size: 18px;
+    height: 18px;
+    line-height: 18px;
+    margin-bottom: 22px;
+    margin-top:22px;
+    color: #333;
+}
+.qrlogin p:last-of-type{
+    font-size: 16px;
+    height: 16px;
+    line-height: 16px;
+}
+/*用户名登录*/
+.loginByName{
+    width: 100%;
+    height: 233px;
+    /* padding-top: 70px; */
+    overflow: hidden;
+}
+/* #username,#password{ */
+.inputs{
+    display: block;
+    width: 272px;
+    height: 27px;
+    padding: 8px;
+    font-size:14px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border: 1px solid #7f7f7f;
+}
+#phonenum{
+    width: 215px;
+    padding-left:65px; 
+}
+/* #username:focus,#password:focus{ */
+.inputs:focus{ 
+    border-color:#32A5E7 ;
+}
+.checklogin{
+    width: 290px;
+    margin: 0 auto;
+    height: 30px;
+    opacity: 1;
+    /* border:1px solid red; */
+}
+.rember{
+    width:120px;
+    height: 20px;
+    margin: 0 auto;
+    margin-top:23px;
+    margin-bottom:33px;
+    display: inline-block;
+    padding-left: 15px;
+}
+.rember input{
+    float: left;
+    width: 16px;
+    height: 16px;
+    /* border: none; */
+    border: 1px solid #dadada;
+}
+.rember span{
+    padding-left: 5px;
+    line-height: 15px;
+    float: left;
+    font-size: 14px;
+    color: #7f7f7f;
+}
+#login{
+    width: 100%;
+    height: 46px;
+    /* display: block; */
+    background-color: #32a5e7;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 14px;
+}
+#login:hover{
+    filter: brightness(1.2);
+}
+.login_link{
+    width: 100%;
+    margin-top: 14px;
+}
+.login_link a:first-child{
+    float: left;
+}
+.login_link a:last-child{
+    float: right;
+}
+.login_link a{
+    color: #32a5e7;
+    font-size: 12px;
+    height: 12px;
+    line-height: 12px;
+}
+/*验证码登录*/
+.loginBySMS{
+    width: 100%;
+    height: 130px;
+    /* overflow: hidden; */
+    position: absolute;
+    left: 340px;
+    top: 163px;
+    z-index: 100;
+    /* background: sandybrown; */
+    display: none;
+    padding-top:1px;
+
+}
+/* #phonenum,#smstext{
+    display: block;
+    width: 278px;
+    height: 33px;
+    padding: 5px;
+    font-size:18px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border: 1px solid #7f7f7f;
+}
+#phonenum:focus,#smstext:focus{
+    border-color:#32A5E7 ;
+} */
+.loginBySMS a{
+    display: block;
+    height: 22px;
+    line-height: 22px;
+    width: 102px;
+    font-size: 14px;
+    color: #7f7f7f;
+    position: absolute;
+    left: 216px;
+    top: 78px;
+    padding-left: 16px;
+    border-left:1px solid #dadada;
+}
+.loginBySMS p{
+    height: 24px;
+    width: 50px; 
+    font-size: 14px;
+    color: #7f7f7f;
+    position: absolute;
+    left: 50px;
+    top: 11px;
+    padding-left: 10px;
+    border-right:1px solid #dadada;
+    cursor: pointer;
+    line-height: 24px;
+    background: url(../img/jiao.gif) no-repeat;
+    background-position: 45px 12px;
+}
+.phoneCode{
+    width: 292px;
+    height: 240px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: absolute;
+    background-color:white; 
+    left: 50px;
+    top: 50px;
+    z-index: 101;
+    font-size: 14px;
+    display: none;
+}
+.phoneCode div{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    background-color:#f2f2f2; 
+}
+.phoneCode li{
+    width: 100%;
+    height: 24px;
+    cursor: pointer;
+    line-height: 24px;
+}
+.country{
+    float: left;
+}
+.phone-code{
+    float: right;
+}
+#outer{
+    width: 288px;
+}
+
+/*foot*/
+.foot{
+    width: calc(100%-260px);
+    height: 53px;
+    padding: 45px 130px 32px;
+}
+.links{
+    float: left;
+    position: relative;
+
+}
+.links a{
+    font-size:14px;
+    height: 14px;
+    line-height: 14px;
+    color: #000;
+}
+.links a:last-of-type{
+    background: url(../img/jiao.gif) no-repeat;
+    background-position: 64px 12px;
+}
+.links a:hover{
+    color: #32a5e7;
+}
+.links span{
+    font-size: 10px;
+    line-height: 10px;
+    margin: 0 9px;
+    background-color: #888;
+    display: inline-block;
+    height: 10px;
+    width: 1px;
+}
+.lang{
+    width: 79px;
+    height: 82px;
+    position: absolute;
+    left: 388px;
+    top: -79px;
+    overflow: hidden;
+    border: 1px solid #e1e4e8;
+    cursor: pointer;
+    background-color: white;
+}
+.lang li{
+    width: 100%;
+    height: 40px;
+    font-size:12px;
+    line-height: 40px;
+    color: #000;
+    text-align: center;
+}
+.lang li:first-of-type{
+    color: #32a5e7;
+}
+.lang li:last-of-type{
+    border-top: 1px solid #e1e4e8;
+}
+.contact{
+    float: left;
+    margin-left: 38px;
+}
+.contact a,.contact span{
+    font-size:14px;
+    height: 14px;
+    line-height: 14px; 
+}
+.contact a{
+    display: inline-block;
+    height: 20px;
+    width: 64px;
+    color: white;
+    background-color: #32a5e7;
+    line-height: 20px;
+    text-align: center;
+    margin-left: 25px;
+    border-radius: 2px;
+}
+.contact a:hover{
+    filter: brightness(1.2);
+}
+.wx{
+    margin-left: 124px;
+    float: left;
+    margin-top: -1px;
+} 
+.wx a{
+    color: #999;
+}
+.icon-weibo,.icon-wechat,.icon-062qqkongjian{
+    font-size: 24px;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    border:1px solid #c8c8c8;
+    margin-right: 8px;
+    color: #999;
+}
+.icon-062qqkongjian{
+    margin-right: 0px;   
+
+}
+.icon-wechat{
+    color: #a8a8a8;
+}
+.icon-weibo:hover{
+    color: salmon;
+    border-color: salmon;
+}
+.icon-wechat:hover{
+    color: #90EE90;
+    border-color: #90EE90;
+}
+.icon-062qqkongjian:hover{
+    color:#ffc100;
+    border-color: #ffc100;
+}
+.copyright-text{
+    margin-top: 32px;
+    float: left;
+    font-size:12px;
+    line-height: 12px;
+    color: #7f7f7f;
+}
+.copyright-text a{
+    color: #7f7f7f;   
+}
+.copyright-text a:first-of-type{
+    color: black;   
+}

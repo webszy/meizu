@@ -1,0 +1,342 @@
+﻿@charset "UTF-8";
+body{
+    position: relative;
+}
+.header{
+    height: 80px;
+    background: white;
+    overflow: hidden;
+    border-bottom: 1px solid #efefef;
+    margin-bottom: 10px;
+}
+.logo img{
+    width: 125px;
+    margin: 28px 55px 0px 20px;
+}
+.logo{
+    float: left;
+ 
+}
+.guid{
+    float: left;
+    font-size: 12px;
+    height: 80px;
+    line-height: 80px;
+    color: #999;
+}
+.guid span{
+    padding: 0 11px;
+}
+.guid span:first-of-type{
+    color: #333;
+}
+.menu{
+    float: right;
+}
+.menu a{
+    font-size: 12px;
+    line-height: 80px;
+    display: inline-block;
+    height: 80px;
+    padding-right: 30px;
+    color: #666;
+}
+.menu a:nth-of-type(2){
+    margin: 0 20px;
+}
+.menu a:hover{
+    color:#00c3f5;
+}
+.wrap{
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    /* height: 200px; */
+    /* background: salmon; */
+    overflow: hidden;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #efefef;
+}
+.cart_tit{
+    width: 100%;
+    height: 49px;
+    border-bottom: 1px solid #efefef;
+    background: white;
+    padding-left:22px;
+    box-sizing: border-box;
+}
+.cart_tit p{
+    float: left;
+    font-size: 12px;
+    line-height:49px; 
+    color:#adbfdc;
+}
+.checkboxs{
+    float: left;
+    width: 16px;
+    height: 16px;
+    margin-top: 17px;
+    margin-right: 4px;
+}
+.cart_tit p:first-of-type{
+    width: 567px;
+}
+.cart_tit p:nth-of-type(2){
+    width: 210px;
+}
+.cart_tit p:nth-of-type(3){
+    width: 162px;
+}
+.cart_tit p:nth-of-type(4){
+    width: 178px;
+}
+
+.cart_tit .editCart{
+    cursor: pointer;
+    color: #00c3f5;
+}
+.first_line{
+    height: 50px;
+    border-bottom: 1px solid #efefef;
+    padding-left:23px;
+    box-sizing: border-box;
+}
+.first_line p{
+    float: left;
+    font-size: 12px;
+    line-height:49px; 
+    color: #8c8c8c;
+}
+.first_line p:first-of-type{
+    width: 56px;
+    color: #666;
+}
+/*购物车无商品或未登陆时*/
+.nogood{
+    height: 300px;
+    background: white;
+    margin-bottom: 10px; 
+    border: 1px solid #efefef;
+    position: relative; 
+}
+.nogood_con{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.nogood_con a{
+    display: block;
+    width: 56px;
+    height: 34px;
+    line-height: 34px;
+    padding: 0 36px;
+    color: white;
+    background-color: #32a5e7;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: all .6s;
+}
+.nogood_con a:hover{
+    filter: brightness(1.2);
+}
+.nogood_left{
+    width: 102px;
+    height: 133px;
+    background-image: url(../img/cry.png);
+    background-size: cover;
+    float: left;
+    margin-right: 30px;
+}
+.nogood_right{
+    float: left;
+    color: #666;
+}
+.nogood_right h3{
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+.nogood_right p{
+    font-size: 14px;
+    margin-bottom: 22px;
+}
+/*购物车商品*/
+.goods{
+    background: white;
+    margin-bottom: 10px;
+    display: none;
+}
+.buyBytheway{
+    overflow: hidden;
+    padding-top: 18px;
+    padding-left: 24px;
+}
+.jiajiagou{
+    width: 60px;
+    height: 18px;
+    border: 1px solid #e02b41;
+    line-height: 18px;
+    text-align: center;
+    font-size: 12px;
+    color: #e02b41;
+    border-radius: 1px;
+    float: left;
+    margin-right: 10px;
+}
+.jiajiagou~p{
+    float: left;
+    color: #595959;
+    font-size: 12px;
+    line-height: 20px;
+    height: 20px;
+}
+.buyBytheway a{
+    float: left;
+    font-size: 12px;
+    line-height: 20px;
+    height: 20px;
+    display: block;
+    color: #00c3f5;
+    padding-left: 10px;
+}
+.goods{
+    padding-left: 23px;
+    overflow: hidden;
+}
+.good_info{
+    overflow: hidden;
+    padding: 35px 0;
+    height: 90px;
+    border-bottom:1px solid #efefef;
+}
+.good_info .checkboxs{
+    margin-top: 40px;
+    margin-right: 20px;
+}
+.good_info img{
+    display: block;
+    float: left;
+    width: 100px;
+    height: 100px;
+    margin-right: 15px;
+}
+.good_intro{
+    padding-top: 17px;
+    font-size: 14px;
+    height: 47px;
+    float: left;
+    width: 420px;
+}
+.good_intro h4{
+    line-height: 24px;
+    height: 24px;
+}
+.good_intro p{
+    line-height: 24px;
+    height: 24px;
+    color: #8c8c8c;
+}
+.good_price{
+    float: left;
+    font-size: 14px;
+    padding-top: 40px;
+    line-height: 14px;
+    height: 14px;
+    color: #666;
+    margin-right: 105px;
+    width: 88px;
+}
+.good_num{
+    float: left;
+    height: 100%;
+    padding-top: 32px;
+    margin-right: 105px;
+}
+.btn{
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+    display: block;
+    border: 1px solid #efefef;
+    background: white;
+    float: left;
+    font-size: 16px;
+    font-weight: 100;
+}
+.good_num .num{
+    border: none;
+    border-top: 1px solid #efefef;
+    border-bottom: 1px solid #efefef;
+    float: left;
+    width: 15px;
+    height: 22px;
+    padding: 0 10px;
+    text-align: center;
+}
+.good_sum{
+    float: left;
+    padding-top: 35px;
+    font-size: 14px;
+    color: #8c8c8c;
+}
+/*购物车的合计行*/
+.cart_footer{
+    width: 100%;
+    height: 70px;
+    background: white;
+    padding-left: 23px;
+    box-sizing: border-box;
+    position: relative;
+}
+.cart_footer .checkboxs{
+    margin-top: 30px;
+    margin-right: 9px;
+}
+.cart_footer span{
+    height: 70px;
+    line-height: 70px;
+    font-size: 14px;
+    color: #8c8c8c;
+}
+.qx{
+    color: #333;
+}
+#removeselect{    
+    margin: 0 24px 0 12px;
+    cursor: pointer;
+}
+.heji span,.xz span{
+    padding: 0 5px; 
+}
+#selectcount{
+    color: #00c3f5;
+}
+.xz{
+    margin-right: 449px;
+}
+.hjjr{
+    color: #595959;
+    font-size: 16px;
+    margin-right: 28px;
+}
+.hjjr span{
+    font-size: 20px;
+    color: #e02b41;
+    font-weight: 600;
+}
+.checkout{
+  background-color:   #f66567;
+  width: 98px;
+  height: 34px;
+  border: none;
+  border-radius: 1px;
+  display: inline-block;
+  color: white;
+  font-size: 12px;
+  padding: 0 20px;
+  position: absolute;
+  right: 30px;
+  top:18px;
+}

@@ -1,0 +1,198 @@
+@charset "UTF-8";
+body {
+  background-color: #f4f4f4; }
+
+.head {
+  width: 100%;
+  height: 40px;
+  background-color: #f6f8fb;
+  border-top: 1px solid #efefef;
+  border-bottom: 1px solid #efefef;
+  font-size: 14px;
+  line-height: 40px;
+  padding-left: 13px;
+  box-sizing: border-box;
+  color: #999; }
+  .head a {
+    color: #333; }
+  .head a:last-child {
+    color: #999; }
+
+.selector {
+  width: 98%;
+  height: 170px;
+  background: #FFF;
+  padding: 15px 10px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  margin-bottom: 10px; }
+  .selector .aHover {
+    color: #00c3f5; }
+
+.selector_item {
+  height: 46px;
+  line-height: 46px;
+  color: #333; }
+  .selector_item a {
+    font-size: 14px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #333;
+    padding: 0 25px; }
+  .selector_item a:hover {
+    transition: all .6s;
+    color: #00c3f5; }
+  .selector_item span {
+    font-size: 14px;
+    display: inline-block;
+    padding-left: 10px;
+    width: 75px;
+    margin-right: 10px;
+    user-select: none; }
+
+.filter {
+  width: 100%;
+  font-size: 14px;
+  padding: 22.5px 13px;
+  overflow: hidden;
+  box-sizing: border-box;
+  /*a标签hover效果*/ }
+  .filter .aHover {
+    color: #00c3f5; }
+
+.filter_l {
+  float: left; }
+  .filter_l a {
+    font-size: 14px;
+    color: #666;
+    width: 50px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 20px; }
+  .filter_l a:hover {
+    transition: all .6s;
+    color: #00c3f5; }
+  .filter_l .up {
+    width: 43px;
+    background: url(../img/arrow.gif) no-repeat right center;
+    background-position-y: 6px; }
+  .filter_l .down {
+    width: 43px;
+    background: url(../img/arrow.gif) no-repeat right center;
+    background-position-y: -9px; }
+
+.filter_r {
+  float: right;
+  cursor: pointer;
+  color: #666; }
+  .filter_r i {
+    float: left;
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    margin-top: 2px;
+    margin-right: 6px; }
+  .filter_r p {
+    float: left;
+    font-size: 12px; }
+
+/*仿checkbox选中效果*/
+.isChecked {
+  background: url(../img/checkbox.gif) no-repeat left center; }
+
+.content {
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 0 8px;
+  box-sizing: border-box;
+  margin-bottom: 30px; }
+
+.phone_detail {
+  padding: 20px 30px 0;
+  box-sizing: border-box;
+  width: 300px;
+  height: 390px;
+  background-color: white;
+  float: left;
+  transition: all 0.4s;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  position: relative;
+  cursor: pointer; }
+  .phone_detail img:first-child {
+    width: 200px;
+    display: block;
+    margin: 0 auto; }
+
+.phone_detail:hover {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); }
+
+.phone_detail:hover .compare {
+  opacity: 1; }
+
+.phoneImgs {
+  width: 100%;
+  height: 42px;
+  display: -webkit-flex;
+  justify-content: center;
+  margin: 13px 0 15px; }
+  .phoneImgs img {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #efefef;
+    float: left; }
+  .phoneImgs img:first-child {
+    width: 40px;
+    margin-left: 5px; }
+  .phoneImgs img:nth-child(odd) {
+    margin-right: 8px; }
+
+/*图片点中时增加边框*/
+.phoneImgs_border {
+  border-color: #bdbdbd; }
+
+.phone_link {
+  color: #333;
+  text-align: center;
+  display: block;
+  width: 100%; }
+  .phone_link h2 {
+    font-size: 14px;
+    line-height: 14px;
+    height: 14px;
+    margin-bottom: 15px;
+    font-weight: 100; }
+  .phone_link h3 {
+    font-size: 12px;
+    line-height: 12px;
+    height: 12px;
+    color: #e02b41;
+    margin-bottom: 18px;
+    font-weight: 100; }
+
+.pr-price {
+  font-size: 18px; }
+
+.pr-price + span {
+  font-size: 12px; }
+
+.phone_price {
+  color: #e02b41;
+  margin-left: -2px; }
+
+.compare {
+  width: 50px;
+  font-size: 14px;
+  height: 21px;
+  line-height: 21px;
+  background: url(../img/compare.gif) no-repeat left center;
+  background-size: 20px 20px;
+  text-indent: 21px;
+  position: absolute;
+  left: 24px;
+  top: 22px;
+  opacity: 0;
+  transition: all .3s;
+  color: #666; }

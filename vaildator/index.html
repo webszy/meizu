@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="jquery.min.js"></script>
+<style>
+
+
+.white {
+    color: #606060;
+    border: solid 1px #b7b7b7;
+    background: #fff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ededed));
+    background: -moz-linear-gradient(top, #fff, #ededed);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed')
+}
+
+.bigrounded {
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    border-radius: 2em
+}
+
+.button {
+    display: inline-block;
+    outline: 0;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font: 16px/100% 'Microsoft yahei', Arial, Helvetica, sans-serif;
+    padding: .4em 2em .55em;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+    -webkit-border-radius: .5em;
+    -moz-border-radius: .5em;
+    border-radius: .5em;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+    margin-left: 50px
+}
+
+.outer {
+    position: relative;
+    width: 288px;
+    height: 28px;
+    line-height: 28px;
+    border: 1px solid #ccc;
+    background: #ccc9c9;
+    font-size: 12px;
+    margin: auto;
+    float: left
+}
+
+.outer span,
+.filter-box,
+.inner {
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.outer span {
+    display: block;
+    padding: 0 0 0 15px;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+	box-sizing:border-box;
+}
+
+.txtRoll {
+    background-image: linear-gradient(to right, black, black, white, black, black, white, black);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-background-size: 200% 100%;
+    animation: bgp 3s infinite linear;
+}
+
+@-webkit-keyframes bgp {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: -100% 0;
+    }
+}
+
+.filter-box {
+    width: 0;
+    height: 100%;
+    background: green;
+    z-index: 9
+}
+
+.outer.act span {
+    padding: 0 36px 0 0
+}
+
+.inner {
+    width: 36px;
+    height: 28px;
+    text-align: center;
+    background: #fff;
+    cursor: pointer;
+    font-family: 宋体;
+    z-index: 10;
+    font-weight: 700;
+    color: #929292
+}
+
+.outer.act .inner {
+    color: green
+}
+
+.outer.act span {
+    z-index: 99
+}
+</style>
+</head>
+<body>
+<div  style="width: 288px;overflow:hidden;">
+<div class="outer" id="outer">
+<input type="hidden" id="CaptchaID" value="0" />
+<div class="filter-box"></div>
+<span class="txtRoll">
+按住滑块，拖拽到最右边
+</span>
+<div class="inner">&gt;&gt;</div>
+</div>
+<!--
+<input type="button" class="button white bigrounded" value="重置" />
+<div style="clear:both;"></div>
+-->
+</div>
+</body>
+</html>
+<script>
+$(function () {
+    $(".inner").mousedown(function (e) {
+        var dx, os = $(".inner").offset(),
+            _differ = $(".outer").width() - $(".inner").width();
+        $(document).mousemove(function (e) {
+            dx = e.pageX - os.left;
+            if (dx < 0) {
+                dx = 0;
+            } else if (dx > _differ) {
+                dx = _differ;
+            }
+            $(".filter-box").css('width', dx);
+            $(".inner").css("left", dx);
+        });
+        $(document).mouseup(function (e) {
+            $(document).off('mousemove');
+            $(document).off('mouseup');
+            dx = e.pageX - os.left;
+            if (dx < _differ) {
+                SlideCheckFail();
+            } else if (dx >= _differ) {
+                SlideCheckSuccess(_differ);
+            }
+        })
+    })
+    $("input[type=button]").click(function () {
+        SlideCheckFail();
+    });
+});
+
+function SlideCheckFail() {
+    $(".outer").removeClass("act");
+    $(".inner").css("left", 0);
+    $(".inner").html("&gt;&gt;");
+    $(".filter-box").css('width', 0);
+    $(".outer>span").html("按住滑块，拖拽到最右边");
+    $("#CaptchaID").val("0");
+    $(".outer span").addClass("txtRoll");
+}
+
+function SlideCheckSuccess(dx) {
+    $(".outer").addClass("act");
+    $(".outer>span").html("验证通过！");
+    $(".inner").html('&radic;');
+    $(".inner").css("left", dx);
+    $(".filter-box").css('width', dx);
+    $("#CaptchaID").val("1");
+    $(".outer span").removeClass("txtRoll");
+}
+</script>

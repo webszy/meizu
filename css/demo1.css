@@ -1,0 +1,13 @@
+body {
+  background: salmon; }
+  body div {
+    background: blue;
+    font-size: 12px;
+    width: 100px;
+    height: 100px; }
+
+div a:nth-child(1) {
+  width: 0px; }
+
+div a:nth-child(2) {
+  width: 10px; }
