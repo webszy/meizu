@@ -209,6 +209,7 @@ body{
     padding: 35px 0;
     height: 90px;
     border-bottom:1px solid #efefef;
+    position: relative;
 }
 .good_info .checkboxs{
     margin-top: 40px;
@@ -339,4 +340,21 @@ body{
   position: absolute;
   right: 30px;
   top:18px;
+}
+.add{
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	border:1px solid #bdbdbd;
+    position: absolute;
+    transform: rotateZ(45deg);
+    right: 44px;
+    top: 65px;
+    cursor: pointer;
+}
+.add:hover{
+    border-color: #00c3f5;
+}
+.add:hover i{
+    background-color: #00c3f5;
 }

@@ -121,11 +121,11 @@ $(document).ready(function () {
             deleteCartGood(goodsId,currname);
         });
     });
-
-    //打开页面时判断cookie,获取购物车内商品数量
+    //单选删除
  
 });
 window.onload=function(){
+        //打开页面时判断cookie,获取购物车内商品数量
     let currname=analysisCookie("username");
     if(currname!=null){
         // console.log(document.cookie);
@@ -135,8 +135,19 @@ window.onload=function(){
         // $(".good_info").remove();
         getCartNum(currname);
         getUserCart(currname); 
-
         // selectednum();
+        $(".add").live("click",function (e) { 
+            e.preventDefault();
+            let gid=$(this).attr("data-gid");
+            showAlert("操作确认","确定删除选中商品吗",function(){
+                let goodsId=[];
+                goodsId.push(gid);
+                let currname=analysisCookie("username")
+                console.log(goodsId);
+                $(this).parent().remove();
+                deleteCartGood(goodsId,currname);
+             });
+        });
     }
 }
 function exitAlert(){
@@ -207,12 +218,13 @@ function insertGood(data){
             "<div class='good_num'><input type='button' value='+' class='numAdd btn'/>"+
             "<input type='text' class='num' value='"+data[indexInArray].goodsCount+"'/>"+
             "<input type='button' value='-' class='numSub btn'/></div>"+
-            "<p class='good_sum'>￥<span>"+total+".00"+"</span></p></div>";
-            
+            "<p class='good_sum'>￥<span>"+total+".00"+"</span></p>"+
+            "<div class='add' data-gid='"+data[indexInArray].goodsId+"'><i></i><i></i></div></div>";
         });
         $(".buyBytheway").after(HtmlStr);
         calcTotal();
         $(".loading").css("display","none");
+     
 }
 function updateGoodNum(gid,num,name) {
     if(gid.length!=5||num<0||num>9||name==""||name==undefined||name==null){
