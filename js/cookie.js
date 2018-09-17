@@ -5,7 +5,6 @@ function addCookie(item,value,dayCount){
     }else{
         d.setDate(d.getDate()+dayCount);
     }
-	
 	document.cookie = item+"="+escape(value)+";expires="+d.toGMTString();
 }
 function removeCookie(item){//删除解析Cookie

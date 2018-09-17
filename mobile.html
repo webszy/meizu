@@ -15,7 +15,7 @@
     <link rel="stylesheet" type ="text/css" href="css/mobile.css">
 </head>
 <body>
-    <div class="wrap">
+    <div class="wrap" id="content">
         <header>
             <div class="header-left">
                 <a href="javascript:void(0)">
@@ -205,15 +205,22 @@ window.onload=function(){
         speed:300
     });
 
-     document.body.addEventListener('scroll', function(){
-        let scrollTop =  document.documentElement.scrollTop || document.body.scrollTop ;
-        console.log(scrollTop);
-        if(scrollTop>300){
-            document.getElementById("goTop").style.display="block";
-        }else{
-            document.getElementById("goTop").style.display="none";
-        }
+    document.getElementById("content").addEventListener('scroll', function () {
+        console.log(document.documentElement.scrollTop || document.body.scrollTop );
+       if(window.pageYOffset + window.innerHeight >= document.documentElement.scrollHeight){
+           console.log(a);
+    }
     },false);
+
+    //  document.body.addEventListener('scroll', function(){
+    //     let scrollTop =  document.documentElement.scrollTop || document.body.scrollTop ;
+    //     console.log(scrollTop);
+    //     if(scrollTop>300){
+    //         document.getElementById("goTop").style.display="block";
+    //     }else{
+    //         document.getElementById("goTop").style.display="none";
+    //     }
+    // },false);
     // document.body.onscroll=function(){
     //     let scrollTop =  document.documentElement.scrollTop || document.body.scrollTop ;
     //     console.log(scrollTop);
@@ -232,5 +239,6 @@ window.onload=function(){
     //         document.getElementById("goTop").style.display="none";
     //     } 
     // });
+
 }
 </script>
